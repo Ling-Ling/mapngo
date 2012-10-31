@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Map'n'Find</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="themes/derp.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+<script src="jquery.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("login").click(function(){
+    $("buttons").hide();
+  });
+});</script>
+
+</head> 
+
+<body> 
+	<div data-role="page" id="whale">
+
+	<div data-role="header" data-position="fixed">
+		<h1>User Login</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	</div><!-- /content -->
+
+
+	<div data-role="fieldcontain">
+		<center>
+		<label for="username"><center><b>Username</b></center></label>
+		<input type="text" name="username" id="username" value=""/>
+		</center>
+	</div>
+
+	<div data-role="fieldcontain">
+		<center>
+		<label for="password"> <center><b>Password</b></center></label> 
+		<input type="password" name="password" id="password" value=""/>
+		</center>
+	</div>
+
+	<div data-role="buttoncontain" id="buttons">
+		<center>
+		<a href="#" data-inline="true" data-theme="a" data-role="button" 			name="reset" data-icon="delete" >Reset Password</a>
+		<a href="#" data-inline="true" data-theme="b" data-role="button" 			name="login" data-icon="check" input type="submit">Login</a>
+		</center>
+	</div>
+	</form>
+
+
+
+<script> 
+	$("form").submit(function() {
+		if ($("input:first").val() == "correct") {
+			$("span").text("Validated...").show();
+       	 		return true;
+		}
+		$("span").text("Not valid!").show().fadeOut(1000);
+      		return false;
+    	});
+</script>
+
+	<div data-role="footer" data-position="fixed">
+		<h1>Map'n'Go</h1>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
