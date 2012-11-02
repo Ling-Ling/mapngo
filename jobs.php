@@ -36,60 +36,49 @@ header("Pragma: no-cache");
 	$username="ccs147defade"; 
 	$password="chietiwe"; 
 	$db_name="c_cs147_defade"; 
-	$tbl_name="events";
+	$tbl_name="jobs";
 
 
 	mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 	mysql_select_db("$db_name")or die("cannot select DB");
 
 	$event=$_GET['event'];
-
-	$query="SELECT * FROM $tbl_name WHERE name='$event'";
+	$query="SELECT * FROM $tbl_name WHERE name='$event' AND fulltime='1'";
 	$result=mysql_query($query);
-
-	$count=mysql_num_rows($result);
-	$row = mysql_fetch_assoc($result);
-
-
-	if($count==1){	
 	
-	// echo $row["description"];
-	}
-	else {
-		echo "No such thing found.";
-	}
 	?>
     	<div class="ui-grid-a">
-			<div class="ui-block-a"><a href="" data-role="button" class="ui-btn-active ui-state-persist">Description</a></div>
-			<?php
-			echo "<div class='ui-block-b'><a href='jobs.php?event=".$row["name"]."' data-role='button'>Job openings</a></div>";	   
+    	    <?php
+			echo "<div class='ui-block-b'><a href='desc.php?event=".$event."' data-role='button'>Description</a></div>";	   
 			?>
+			<div class="ui-block-b"><a href="" data-role="button" class="ui-btn-active ui-state-persist">Job openings</a></div>	   
+		</div>
+		<div data-role="collapsible">
+   			<h3>Full-time Openings</h3>
+   			<ul data-role="listview">
+   			<?php
+   			while ($row = mysql_fetch_assoc($result)) {
+				echo "<li>".$row["job"]."</li>";
+   				}
+			?>
+			</ul>
 		</div>
 		<?php
-		    $query = "SELECT * FROM favorites WHERE name='$event'"; 
-		    $result = mysql_query($query); 
-		    $count = mysql_num_rows($result); 
-		    echo "<img src='".$row["image"]."' alignt='left'>";
-		    if($count==1) {
-		       echo "<form action='remove.php' method='post'>";
-		       echo "<input type='hidden' name='event' value='".$event."' />";
-		       echo "<input type='submit' data-icon='delete' data-mini='true' data-inline='true' value='Remove from favorites'/>";
-               echo "</form>";
-		    }
-		    else{
-		       echo "<form action='add.php' method='post'>";
-		       echo "<input type='hidden' name='event' value='".$event."' />";
-		       echo "<input type='submit' data-mini='true' data-inline='true' value='Add to favorites'/>";
-               echo "</form>";
-		    }
-		    
-		    echo "<dl title='Description'>";
-		    echo "<dt><strong>Description</strong></dt>";
-		    echo "<p>";
-		    echo "<dd>".$row["description"]."</dd></dl>";
-	     ?>
-
-		</div><!-- /content -->
+		    $query = "SELECT * FROM $tbl_name WHERE name='$event' AND fulltime='0'";
+		    $result = mysql_query($query);
+		    $count=mysql_num_rows($result);
+		    if($count > 0){
+		    echo "<div data-role='collapsible'>";
+		    echo "<h3>Internship Openings</h3>";
+		    echo "<ul data-role='listview'>";
+		    while($row = mysql_fetch_assoc($result)){
+		         echo "<li>".$row["job"]."</li>";	
+		       }	
+		    echo "</ul></div>";
+		    	
+		    }	
+		    ?>
+   		</div><!-- /content -->
      
 
 	<div data-role="footer" data-position="fixed">
