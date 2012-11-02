@@ -1,0 +1,21 @@
+#events-nav {
+    float: left;
+}
+div {
+   overflow: auto;
+}
+img{
+width:auto;
+height:auto;
+/*min-width:100%;
+min-height:100%;
+max-width:100%;
+max-height:100%;
+overflow:auto;*/
+}
+html, body {
+    overflow: auto;
+}
+#Image-Maps_820121030191949 {
+overflow:auto;
+}
