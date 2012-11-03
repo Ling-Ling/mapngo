@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
 	
 </head> 
 
@@ -15,11 +16,15 @@
 	<div data-role="page" id="allevents">
 
 	<div data-role="header" data-position="fixed">
-		<a href="main.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<a href="index.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
+		<script type="text/javascript">
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		</script>
+
 		<div class="ui-grid-a">
 			<div class="ui-block-a"><a href="" data-role="button" class="ui-btn-active ui-state-persist">All Events</a></div>
 			<div class="ui-block-b"><a href="favorites.php" data-role="button">My Favorites</a></div>	   

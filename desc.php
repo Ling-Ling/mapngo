@@ -30,6 +30,11 @@ header("Pragma: no-cache");
 	</div><!-- /header -->
 
 	<div data-role="content">
+	<script type="text/javascript">
+	Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI"); 
+	</script>
+
+
 	<?php
 
 	$host="mysql-user-master.stanford.edu"; 
