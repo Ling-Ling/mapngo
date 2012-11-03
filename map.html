@@ -10,6 +10,7 @@
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 <script src="jquery.scrollview.js" type="text/javascript"></script>
 <link rel="stylesheet" href="style.css" />	
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
 </head> 
 
 <body> 
@@ -20,20 +21,26 @@
 		<h1>CS Career Fair(Comiket)</h1>
 	</div><!-- /header -->
 
-	<div data-role="content"><!--	
---><div id="map">
+	<div data-role="content">
+
+<script type="text/javascript">
+Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI"); 
+</script>
+
+<div id="map">
 <img id="Image-Maps_820121030191949" src="images/careermap.pdf" usemap="#Image-Maps_8201210301919409" border="0" width="3000" height="1200" alt="" />
 <map id="_Image-Maps_8201210301919409" name="Image-Maps_8201210301919409">
-<area shape="rect" coords="190,58,325,108" href="http://stanford.edu/~defade/cgi-bin/prototype/adobe.html" alt="Adobe Systems" title="Adobe Systems"    />
-<area shape="rect" coords="135,142,195,258" href="http://stanford.edu/~defade/cgi-bin/prototype/apple.html" alt="Apple Inc." title="Apple Inc."    />
-<area shape="rect" coords="141,288,201,404" href="http://stanford.edu/~defade/cgi-bin/prototype/bluekai.html" alt="bluekai" title="bluekai"    />
+<area shape="rect" coords="190,58,325,108" href="desc.php?event=abobe" alt="Adobe Systems" title="Adobe Systems"    />
+<area shape="rect" coords="135,142,195,258" href="desc.php?event=apple" alt="Apple Inc." title="Apple Inc."    />
+<area shape="rect" coords="141,288,201,404" href="desc.php?event=bluekai" alt="bluekai" title="bluekai"    />
 <area shape="rect" coords="498,748,500,750" href="http://www.image-maps.com/index.php?aff=mapped_users_8201210301919409" alt="Image Map" title="Image Map" />
 </map>
+
 <!-- Image map text links - Start - If you do not wish to have text links under your image map, you can move or delete this DIV -->
 <div style="text-align:center; font-size:12px; font-family:verdana; margin-left:auto; margin-right:auto; width:500px;">
-	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="http://stanford.edu/~defade/cgi-bin/prototype/adobe.html" title="Adobe Systems">Adobe Systems</a>
- | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="http://stanford.edu/~defade/cgi-bin/prototype/apple.html" title="Apple Inc.">Apple Inc.</a>
- | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="http://stanford.edu/~defade/cgi-bin/prototype/bluekai.html" title="bluekai">bluekai</a>
+	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="desc.php?event=abobe" title="Adobe Systems">Adobe Systems</a>
+ | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="desc.php?event=apple" title="Apple Inc.">Apple Inc.</a>
+ | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="desc.php?event=bluekai" title="bluekai">bluekai</a>
  | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="http://www.image-maps.com/index.php?aff=mapped_users_8201210301919409" title="Image Map">Image Map</a>
 </div>
 
@@ -41,14 +48,14 @@
 </div>
  
 
-  		<a href="index.html" data-role="button">Link button</a>         		
+  		<a href="index.html" data-role="button"  data-icon="home">Main Menu</a>         		
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed">
 <div data-role="navbar">
 		<ul>
 			<li><a href="map.html" class="ui-btn-active ui-state-persist">Map</a></li>
-			<li><a href="allevents.html">Events</a></li>
+			<li><a href="test.php">Events</a></li>
 		</ul>
 	</div><!-- /navbar -->
 	</div><!-- /footer -->
