@@ -24,17 +24,12 @@ header("Pragma: no-cache");
 <body> 
 	<div data-role="page" id="description">
 
-	<div data-role="header" data-position="fixed">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false">
 		<a href="test.php" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">
-	<script type="text/javascript">
-	Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI"); 
-	</script>
-
-
 	<?php
 
 	$host="mysql-user-master.stanford.edu"; 
@@ -97,7 +92,7 @@ header("Pragma: no-cache");
 		</div><!-- /content -->
      
 
-	<div data-role="footer" data-position="fixed">
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false">
 		<div data-role="navbar">
 			<ul>
 				<li><a href="map.html">Map</a></li>
