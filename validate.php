@@ -11,11 +11,13 @@
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
 
-</head>
-<body>
 
-<div data-role="page" id="whale">
-<div data-role="header" data-position="fixed">
+</head> 
+
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
+	<div data-role="page" id="whale">
+	<div data-role="header" data-position="fixed">
+		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
 		<h1>Validating</h1>
 	</div><!-- /header -->
 
@@ -34,6 +36,7 @@
 			alert("Success");
 			localStorage.setItem('username', myusername);
 			window.location = "index.html";
+
 		},
 		error: function(user, error) {
 			alert("Error: " + error.code + " " + error.message);

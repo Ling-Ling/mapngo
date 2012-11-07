@@ -16,18 +16,19 @@
 	<div data-role="page" id="whale">
 
 	<div data-role="header" data-position="fixed">
-		<h1>Sign Up!</h1>
+		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+		<h1>Sign Up!</h1>	
+	
 	</div><!-- /header -->
 
 	<div data-role="content">	
 	</div><!-- /content -->
 
 	<script type="text/javascript">
-	Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
 	</script>
 	
-	<form id='register' action="register.php" method='post' accept-charset='UTF-8'>
-
+	<form id="register" action="register.php" method="post" >
 
 	<div data-role="fieldcontain">
 		<center>
@@ -45,7 +46,7 @@
 
 	<div data-role="fieldcontain">
 		<center>
-		<label for="password2"> <b>Re-enter Password</b></label>
+		<label for="password2"> <b>Confirm Password</b></label>
 		<input type="password" name="password2" id="password2" value=""/>
 		</center>
 	</div>
@@ -60,7 +61,7 @@
 
 	<div data-role="buttoncontain">
 		<center>
-		<a href="#" data-inline="true" data-theme="b" data-role="button" 			data-icon="check" input type="submit">>Submit</a>
+		<input href="javascript: submitform()" name="login" type="submit" value="Submit" data-inline="true" data-theme="b" data-role="button" data-icon="check">
 		</center>
 	</div>
 	</form>

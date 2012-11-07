@@ -20,14 +20,29 @@ header("Pragma: no-cache");
   <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
 	
 </head> 
+ 
 
-<body> 
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
 	<div data-role="page" id="description">
 
 	<div data-role="header" data-position="fixed" data-tap-toggle="false">
-		<a href="test.php" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<a href="events.php" data-role="button" data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
+			<a class="ui-btn-right" href="logout.php" data-inline="true" data-theme="a" data-role="button" name="logoutButton" id="logoutButton" data-icon="gear" visibility='hidden'>Logout</a>
+		<a class="ui-btn-right" href="login.php" data-inline="true" data-theme="a" data-role="button" name="loginButton" id="loginButton" data-icon="gear" visibility='hidden'>Login</a>
 	</div><!-- /header -->
+	<script type="text/javascript">
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		var currentUser = Parse.User.current();
+		if (currentUser) {
+			document.getElementById("loginButton").style.visibility='hidden';
+			document.getElementById("logoutButton").style.visibility='visible';
+		} else {
+			document.getElementById("loginButton").style.visibility='visible';
+			document.getElementById("logoutButton").style.visibility='hidden';
+		}
+	</script>
+
 
 	<div data-role="content">
 	<?php

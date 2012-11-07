@@ -1,6 +1,6 @@
 <!DOCTYPE html> 
 <html> 
-<head> 
+<head data-add-back-btn="true"> 
 	<title>Map'n'Go</title> 
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
@@ -10,28 +10,26 @@
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
 <script src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>	
+</head> 
 
-<body> 
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
 	<div data-role="page" id="whale">
 
 	<div data-role="header" data-position="fixed">
 		<h1>Conventions</h1>
-		<a class="ui-btn-left" href="signup.html" data-inline="true" data-theme="a" data-role="button" name="signupButton" id="signupButton" data-icon="gear" visibility='hidden'>Sign Up</a>
 		<a class="ui-btn-right" href="logout.php" data-inline="true" data-theme="a" data-role="button" name="logoutButton" id="logoutButton" data-icon="gear" visibility='hidden'>Logout</a>
 		<a class="ui-btn-right" href="login.php" data-inline="true" data-theme="a" data-role="button" name="loginButton" id="loginButton" data-icon="gear" visibility='hidden'>Login</a>
 	</div><!-- /header -->
 	<script type="text/javascript">
-
+		
 		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
 		var currentUser = Parse.User.current();
 		if (currentUser) {
 			document.getElementById("loginButton").style.visibility='hidden';
 			document.getElementById("logoutButton").style.visibility='visible';
-			document.getElementById("signupButton").style.visibility='hidden';
 		} else {
 			document.getElementById("loginButton").style.visibility='visible';
 			document.getElementById("logoutButton").style.visibility='hidden';
-			document.getElementById("signupButton").style.visibility='visible';
 		}
 	</script>
 

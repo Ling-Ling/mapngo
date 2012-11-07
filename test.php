@@ -12,19 +12,31 @@
 	
 </head> 
 
-<body> 
+
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
 	<div data-role="page" id="allevents">
 
 	<div data-role="header" data-position="fixed">
-		<a href="index.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>		
 		<h1>CS Career Fair(Comiket)</h1>
+		<a class="ui-btn-right" href="logout.php" data-inline="true" data-theme="a" data-role="button" name="logoutButton" id="logoutButton" data-icon="gear" visibility='hidden'>Logout</a>
+		<a class="ui-btn-right" href="login.php" data-inline="true" data-theme="a" data-role="button" name="loginButton" id="loginButton" data-icon="gear" visibility='hidden'>Login</a>
 	</div><!-- /header -->
+	<script type="text/javascript">
+		
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		var currentUser = Parse.User.current();
+		if (currentUser) {
+			document.getElementById("loginButton").style.visibility='hidden';
+			document.getElementById("logoutButton").style.visibility='visible';
+		} else {
+			document.getElementById("loginButton").style.visibility='visible';
+			document.getElementById("logoutButton").style.visibility='hidden';
+		}
+	</script>
+
 
 	<div data-role="content">	
-		<script type="text/javascript">
-		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
-		</script>
-
 		<div class="ui-grid-a">
 			<div class="ui-block-a"><a href="" data-role="button" class="ui-btn-active ui-state-persist">All Events</a></div>
 			<div class="ui-block-b"><a href="favorites.php" data-role="button">My Favorites</a></div>	   

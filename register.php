@@ -21,37 +21,34 @@
 
 	<div data-role="content">	
 
-<?php
+<script type="text/javascript">
 
-        if ($_POST["password"] == $_POST["password2"]) {
-?>
-             <script type="text/javascript">
-// Save the username in local storage. That way you
-// can access it later even if the user closes the app.
+        if ("<?php echo $_POST["password"]?>" == "<?php echo $_POST["password2"]?>") {
+
+		// Save the username in local storage. That way you
+		// can access it later even if the user closes the app.
         
-             localStorage.setItem('username', '<?=$_POST["username"]?>');
-             Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
-             var user = new Parse.User();
-             user.set("username", "<?php echo $_POST["username"]?>");
-             user.set("password", "<?php echo $_POST["password"]?>");
-             user.signUp(null, {
-                success: function(user) {       
-           alert("  <?php
-                        echo "".$_POST["username"].", Welcome to MapnGo! You are now logged in.";
-             ?>"); 
-                }, 
-                error: function(user, error) {
-                        alert("Error: " + error.code + " " + error.message);
-                }
-        });
-        </script> 
-        <?php
-        } else {
-                echo "Passwords don't match";
-        }
-        ?>
-
-	
+		localStorage.setItem('username', '<?=$_POST["username"]?>');
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		var user = new Parse.User();
+ 		user.set("username", "<?php echo $_POST["username"]?>");
+		user.set("password", "<?php echo $_POST["password"]?>");
+		user.set("email", "<?php echo $_POST["email"]?>");
+		user.signUp(null, {
+			success: function(user) {       
+           			alert("  <?php echo "".$_POST["username"].", Welcome to MapnGo! You are now logged in."; ?>");
+				window.location = "index.html"; 
+			}, 
+			error: function(user, error) {
+              		alert("Error: " + error.code + " " + error.message);
+				window.location = "signup.html";
+			}
+		});
+	} else {
+		alert("  <?php echo "Passwords don't match. Please try registering again."; ?>");
+		window.location = "signup.html";
+       }
+</script>	
 	</div><!-- /content -->
 
 

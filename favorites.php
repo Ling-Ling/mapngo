@@ -15,16 +15,33 @@ header("Pragma: no-cache");
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>	
 
 </head> 
 
-<body> 
+<body>
 	<div data-role="page" id="allevents">
 
 	<div data-role="header" data-position="fixed" data-tap-toggle="false">
-		<a href="main.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<a href="map.html" data-role="button"  data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
+		<a class="ui-btn-right" href="logout.php" data-inline="true" data-theme="a" data-role="button" name="logoutButton" id="logoutButton" data-icon="gear" visibility='hidden'>Logout</a>
+		<a class="ui-btn-right" href="login.php" data-inline="true" data-theme="a" data-role="button" name="loginButton" id="loginButton" data-icon="gear" visibility='hidden'>Login</a>
 	</div><!-- /header -->
+	<script type="text/javascript">
+		
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		var currentUser = Parse.User.current();
+		if (currentUser) {
+			document.getElementById("loginButton").style.visibility='hidden';
+			document.getElementById("logoutButton").style.visibility='visible';
+		} else {
+			document.getElementById("loginButton").style.visibility='visible';
+			document.getElementById("logoutButton").style.visibility='hidden';
+		}
+	</script>
+
+
 
 	<div data-role="content">	
 		<div class="ui-grid-a">

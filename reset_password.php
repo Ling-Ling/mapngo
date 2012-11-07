@@ -12,15 +12,15 @@
 
 	<script src="jquery.mobile-1.2.0.js"></script>
 <script src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
-
 </head> 
 
 
-<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
+<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')"> 
 	<div data-role="page" id="whale">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a><h1>User Login</h1>
+		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+		<h1>User Login</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -54,15 +54,6 @@
 		</center>
 	</div>
 	</form>
-
-	<div border-top: solid 2px black; data-role="buttoncontain" id="signup">
-		
-		<center><p><b> &nbsp; &nbsp; &nbsp; Not a member? Click below to sign up now.</b></p>
-		<a href="signup.html" data-inline="true" data-theme="a" data-role="button" name="signup" data-icon="gear">Sign Up</a>
-		</center>
-	</div>
-
-
 
 	<div data-role="footer" data-position="fixed">
 		<h1>Map'n'Go</h1>
