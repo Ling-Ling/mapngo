@@ -1,18 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <title>OpenLayers Example</title>
-    <script src="http://openlayers.org/api/OpenLayers.js"></script>
-    </head>
-    <body>
-      <div style="width:100%; height:100%" id="map"></div>
-      <script defer="defer" type="text/javascript">
-        var map = new OpenLayers.Map('map');
-        var wms = new OpenLayers.Layer.Image( "OpenLayers WMS",
-            "careermap.png", new OpenLayers.Bounds(-180,-90,180,90),
-            new OpenLayers.Size(1082,834), {numZoomLevels: 3});
-        map.addLayer(wms);
-        map.zoomToMaxExtent();
-      </script>
+	<title>CSS Image Map</title>
+	<style type="text/css">
+		#map {
+			position: relative;
+			margin:0;
+			padding:0;
+			width:1082px;
+			height:834px;
+			background:url(careermap.png) top left no-repeat #fff;
+			font-family:arial, helvetica, sans-serif;
+			font-size:8pt;
+		}
+		
+		#map li {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		
+		#map li a {
+			position:absolute;
+			display:block;
+			/*
+			   Specifying a background image
+			   (a 1px by 1px transparent gif)
+			   fixes a bug in older versions of
+			   IE that causeses the block to not
+			   render at its full dimensions.
+			*/
+   			background:url(e3.jpg);
+   			text-decoration:none;
+			color:#000;
+		}
+		
+		#map li a span { display:none; }
+		
+		
+	
+		#map a.Apple {
+			top:116px;
+			left:44px;
+			width:26px;
+			height:67px;
+		}
+		
+		#map a.box {
+			top:218px;
+			left:175px;
+			width:26px;
+			height:67px;
+		}
+		
+		#map a.Citrix {
+			top:47px;
+			left:876px;
+			width:67px;
+			height:26px;
+		}
+		
+		#map a.Chevron {
+			top:415px;
+			left:279px;
+			width:67px;
+			height:26px;
+		}
+		
+		#map a.Adobe {
+			top:295px;
+			left:516px;
+			width:67px;
+			height:26px;
+		}
+	</style>
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
+
+	     <link rel="stylesheet" href="themes/derp.min.css" />
+<link rel="stylesheet" href="jquery.mobile.structure-1.2.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
+</head>
+<body>
+<div data-role="header" data-position="fixed" data-tap-toggle="false">
+		<a href="index.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<h1>CS Career Fair(Comiket)</h1>
+	</div><!-- /header -->
+	<div data-role="popup" id="Apple">
+		<p>Apple designs Macs, the best personal computers in the world, along with OS X, iLife, iWork, and professional software.</p>
+		<p><a href="desc.php?event=Apple">Learn More</a></p>
+    </div>
+    <div data-role="popup" id="box">
+		<p>Box (www.box.net), named Inc. Magazine's No. 3 Breakout Company of 2010, is the leading way for individuals, small businesses, and enterprises to share, collaborate, and store content online.</p>
+		<p><a href="desc.php?event=box">Learn More</a></p>
+    </div>
+	<div data-role="popup" id="Citrix">
+		<p>Founded in 1989, Citrix Systems, Inc. (Nasdaq:CTXS) is the global leader and the most trusted name in application delivery infrastructure. </p>
+		<p><a href="desc.php?event=Citrix">Learn More</a></p>
+	</div>
+	<div data-role="popup" id="Chevron">
+		<p>Chevron is one of the world's largest integrated energy companies. Headquartered in San Ramon, Calif., we conduct business worldwide.</p>
+		<p><a href="desc.php?event=Chevron">Learn More</a></p>
+	</div>
+	<div data-role="popup" id="Adobe">
+		<p>Adobe is a diversified software company offering a line of creative, business and mobile software and services.</p>
+		<p><a href="desc.php?event=Adobe">Learn More</a></p>
+	</div>
+<div data-role="content">
+<script type="text/javascript">
+		Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
+		</script>
+<ul id="map">
+	<li><a class="Apple" href="#Apple" title="Apple" data-rel="popup"></a></li>
+
+	<li><a class="box" href="#box" title="box" data-rel="popup"></a></li>
+		
+	<li><a class="Citrix" href="#Citrix" title="Citrix" data-rel="popup"></a></li>
+		
+	<li><a class="Chevron" href="#Chevron" title="Chevron" data-rel="popup"></a></li>
+		
+	<li><a class="Adobe" href="#Adobe" title="Adobe" data-rel="popup"></a></li>
+</ul>
+</div>
+	<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="map.html" class="ui-btn-active ui-state-persist">Map</a></li>
+				<li><a href="events.php">Events</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
 </body>
 </html>
