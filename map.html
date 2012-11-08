@@ -1,26 +1,94 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>Map'n'Gp</title> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>CSS Image Map</title>
+		<title>Page Title</title> 
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="themes/derp.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+
+
+	     <link rel="stylesheet" href="themes/derp.min.css" />
+<link rel="stylesheet" href="jquery.mobile.structure-1.2.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-<script src="jquery.scrollview.js" type="text/javascript"></script>
-<link rel="stylesheet" href="style.css" />	
 <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
-
-</head> 
-
+</head>
 <body>
+<div data-role="header" data-position="fixed" data-tap-toggle="false">
+<style type="text/css">
+		#map {
+			position: relative;
+			margin:0;
+			padding:0;
+			width:1082px;
+			height:834px;
+			background:url(careermap.png) top left no-repeat #fff;
+			font-family:arial, helvetica, sans-serif;
+			font-size:8pt;
+		}
+		
+		#map li {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		
+		#map li a {
+			position:absolute;
+			display:block;
+			/*
+			   Specifying a background image
+			   (a 1px by 1px transparent gif)
+			   fixes a bug in older versions of
+			   IE that causeses the block to not
+			   render at its full dimensions.
+			*/
+   			background:url(blank.png);
+   			text-decoration:none;
+			color:#000;
+		}
+		
+		#map li a span { display:none; }
+		
+		
 	
-	<div data-role="page" id="whale">
+		#map a.Apple {
+			top:116px;
+			left:44px;
+			width:26px;
+			height:67px;
+		}
+		
+		#map a.box {
+			top:218px;
+			left:175px;
+			width:26px;
+			height:67px;
+		}
+		
+		#map a.Citrix {
+			top:47px;
+			left:876px;
+			width:67px;
+			height:26px;
+		}
+		
+		#map a.Chevron {
+			top:415px;
+			left:279px;
+			width:67px;
+			height:26px;
+		}
+		
+		#map a.Adobe {
+			top:295px;
+			left:516px;
+			width:67px;
+			height:26px;
+		}
+	</style>
 
-
-	<div data-role="header" data-position="fixed" data-tap-toggle="false">
-		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+		<a href="index.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
 		<a class="ui-btn-right" href="logout.php" data-inline="true" data-theme="a" data-role="button" name="logoutButton" id="logoutButton" data-icon="gear" visibility='hidden'>Logout</a>
 		<a class="ui-btn-right" href="login.php" data-inline="true" data-theme="a" data-role="button" name="loginButton" id="loginButton" data-icon="gear" visibility='hidden'>Login</a>
@@ -37,41 +105,47 @@
 			document.getElementById("logoutButton").style.visibility='hidden';
 		}
 	</script>
+	<div data-role="popup" id="Apple">
+		<p>Apple designs Macs, the best personal computers in the world, along with OS X, iLife, iWork, and professional software.</p>
+		<p><a href="desc.php?event=Apple">Learn More</a></p>
+    </div>
+    <div data-role="popup" id="box">
+		<p>Box (www.box.net), named Inc. Magazine's No. 3 Breakout Company of 2010, is the leading way for individuals, small businesses, and enterprises to share, collaborate, and store content online.</p>
+		<p><a href="desc.php?event=box">Learn More</a></p>
+    </div>
+	<div data-role="popup" id="Citrix">
+		<p>Founded in 1989, Citrix Systems, Inc. (Nasdaq:CTXS) is the global leader and the most trusted name in application delivery infrastructure. </p>
+		<p><a href="desc.php?event=Citrix">Learn More</a></p>
+	</div>
+	<div data-role="popup" id="Chevron">
+		<p>Chevron is one of the world's largest integrated energy companies. Headquartered in San Ramon, Calif., we conduct business worldwide.</p>
+		<p><a href="desc.php?event=Chevron">Learn More</a></p>
+	</div>
+	<div data-role="popup" id="Adobe">
+		<p>Adobe is a diversified software company offering a line of creative, business and mobile software and services.</p>
+		<p><a href="desc.php?event=Adobe">Learn More</a></p>
+	</div>
+<div data-role="content">
 
+<ul id="map">
+	<li><a class="Apple" href="#Apple" title="Apple" data-rel="popup"></a></li>
 
-	<div data-role="content">
-
-<div id="map">
-<img id="Image-Maps_820121030191949" src="images/careermap.pdf" usemap="#Image-Maps_8201210301919409" border="0" width="3000" height="1200" alt="" />
-<map id="_Image-Maps_8201210301919409" name="Image-Maps_8201210301919409">
-<area shape="rect" coords="190,58,325,108" href="desc.php?event=abobe" alt="Adobe Systems" title="Adobe Systems"    />
-<area shape="rect" coords="135,142,195,258" href="desc.php?event=apple" alt="Apple Inc." title="Apple Inc."    />
-<area shape="rect" coords="141,288,201,404" href="desc.php?event=bluekai" alt="bluekai" title="bluekai"    />
-<area shape="rect" coords="498,748,500,750" href="http://www.image-maps.com/index.php?aff=mapped_users_8201210301919409" alt="Image Map" title="Image Map" />
-</map>
-
-<!-- Image map text links - Start - If you do not wish to have text links under your image map, you can move or delete this DIV -->
-<div style="text-align:center; font-size:12px; font-family:verdana; margin-left:auto; margin-right:auto; width:500px;">
-	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="desc.php?event=abobe" title="Adobe Systems">Adobe Systems</a>
- | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="desc.php?event=apple" title="Apple Inc.">Apple Inc.</a>
- | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="desc.php?event=bluekai" title="bluekai">bluekai</a>
- | 	<a style="text-decoration:none; color:black; font-size:12px; font-family:verdana;" href="http://www.image-maps.com/index.php?aff=mapped_users_8201210301919409" title="Image Map">Image Map</a>
+	<li><a class="box" href="#box" title="box" data-rel="popup"></a></li>
+		
+	<li><a class="Citrix" href="#Citrix" title="Citrix" data-rel="popup"></a></li>
+		
+	<li><a class="Chevron" href="#Chevron" title="Chevron" data-rel="popup"></a></li>
+		
+	<li><a class="Adobe" href="#Adobe" title="Adobe" data-rel="popup"></a></li>
+</ul>
 </div>
-
-<!-- Image map text links - End - -->
-</div>
-	
-	</div><!-- /content -->
-
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false">
-<div data-role="navbar">
-		<ul>
-			<li><a href="map.html" class="ui-btn-active ui-state-persist">Map</a></li>
-			<li><a href="events.php">Events</a></li>
-		</ul>
-	</div><!-- /navbar -->
+		<div data-role="navbar">
+			<ul>
+				<li><a href="map.html" class="ui-btn-active ui-state-persist">Map</a></li>
+				<li><a href="events.php">Events</a></li>
+			</ul>
+		</div><!-- /navbar -->
 	</div><!-- /footer -->
-</div><!-- /page -->
-
 </body>
 </html>
