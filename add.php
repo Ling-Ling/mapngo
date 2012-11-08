@@ -14,12 +14,12 @@
 
 <body>
 
-	<script type="text/javascript">setTimeout(function() {
-  window.location.href = "events.php";
-}, 5000);</script>
+	
 
 	<div data-role="page" id="description">
-
+<script type="text/javascript">setTimeout(function() {
+  window.location.href = "events.php";
+}, 3000);</script>
 	<div data-role="header" data-position="fixed">
 		<a href="events.php" data-role="button" data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
@@ -79,7 +79,7 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="map.html">Map</a></li>
-				<li><a href="test.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="events.php" class="ui-btn-active ui-state-persist">Events</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->

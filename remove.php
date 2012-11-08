@@ -17,12 +17,12 @@
 
 
 <body>
-<script type="text/javascript">setTimeout(function() {
-  window.location.href = "favorites.php";
-}, 5000);</script>
+
 
 	<div data-role="page" id="description">
-
+<script type="text/javascript">setTimeout(function() {
+  window.location.href = "favorites.php";
+}, 3000);</script>
 	<div data-role="header" data-position="fixed">
 		<a href="favorites.php" data-role="button" data-icon="arrow-l">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
