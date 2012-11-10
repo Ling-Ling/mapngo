@@ -36,12 +36,12 @@
 			alert("Success");
 			localStorage.setItem('username', myusername);
 			window.location = "index.html";
-
 		},
 		error: function(user, error) {
 			alert("Error: " + error.code + " " + error.message);
 		}
 	});
+
 </script>
 	
 	</div><!-- /content -->
