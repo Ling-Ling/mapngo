@@ -18,7 +18,7 @@
 		//Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
 		</script>
 	<div data-role="header" data-position="fixed" data-tap-toggle="false">
-		<a href="index.html" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<a href="index.html" data-role="button" data-inline="true" data-icon="home">Home</a>
 		<h1>CS Career Fair(Comiket)</h1>
 		<a href="logout.php" class="ui-btn-right" data-role="button" data-inline-"true" data-them="a" name="logoutButton" id="logoutButton">Logout</a>
 
@@ -27,11 +27,7 @@
 	<div data-role="content">	
 		
 
-		<div class="ui-grid-a">
-			<div class="ui-block-a"><a href="" data-role="button" class="ui-btn-active ui-state-persist">All Events</a></div>
-			<div class="ui-block-b"><a href="favorites.php" data-role="button">Favorites</a></div>	   
-		</div>
-    <p>
+		
 		<ul data-role="listview" data-inset="true" data-filter="true">
 		<?php
 			
@@ -62,7 +58,8 @@
 		<div data-role="navbar">
 			<ul>
 				<li><a href="map.php">Map</a></li>
-				<li><a href="test.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="events.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="favorites.php">Favorites</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->

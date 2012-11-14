@@ -110,6 +110,7 @@
 			<ul>
 				<li><a href="map.html" class="ui-btn-active ui-state-persist">Map</a></li>
 				<li><a href="events.php">Events</a></li>
+				<li><a href="favorites.php">Favorites</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->

@@ -34,12 +34,7 @@ header("Pragma: no-cache");
 
 	<div data-role="content">	
 	
-		<div class="ui-grid-a">
-			<div class="ui-block-a"><a href="events.php" data-role="button">All Events</a></div>
-			<div class="ui-block-b"><a href="" data-role="button" class="ui-btn-active ui-state-persist">Favorites</a></div>	   
-		</div>
-    <p>
-		<ul data-role="listview" data-inset="true" data-filter="true">
+				<ul data-role="listview" data-inset="true" data-filter="true">
 		<?php
 			$host="mysql-user-master.stanford.edu"; 
 			$username="ccs147defade"; 
@@ -67,7 +62,8 @@ header("Pragma: no-cache");
 		<div data-role="navbar">
 			<ul>
 				<li><a href="map.php">Map</a></li>
-				<li><a href="events.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="events.php">Events</a></li>
+				<li><a href="favorites.php" class="ui-btn-active ui-state-persist">Favorites</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->

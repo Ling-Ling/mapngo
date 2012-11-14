@@ -15,9 +15,6 @@
 
 <body> 
 	<div data-role="page" id="description">
-	<script type="text/javascript">setTimeout(function() {
-  window.location.href = "events.php";
-}, 2000);</script>
 
 	<div data-role="header" data-position="fixed">
 		<a href="main.html" data-role="button" data-inline="true" data-icon="arrow-l" data-rel="back">Back</a>
@@ -46,7 +43,10 @@
     echo "shit blew up";	
     }
     else{
-    echo "Successfully removed from favorites"; 	
+    echo "Successfully removed from favorites, please wait while you are redirected."; 	
+    echo "<script type='text/javascript'>setTimeout(function(){";
+    echo "window.location.href = 'desc.php?event=".$event."';";
+    echo "},2000);</script>";
     }
 	?>
 
@@ -59,8 +59,9 @@
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="map.html">Map</a></li>
-				<li><a href="test.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="map.php">Map</a></li>
+				<li><a href="events.php">Events</a></li>
+				<li><a href="favorites.php">Favorites</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->

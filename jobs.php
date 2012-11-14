@@ -25,7 +25,7 @@ header("Pragma: no-cache");
 	<div data-role="page" id="description">
 
 	<div data-role="header" data-position="fixed" data-tap-toggle="false">
-		<a href="events.php" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
+		<a href="events.php" data-role="button" data-inline="true" data-icon="arrow-l" data-rel="back">Back</a>
 		<h1>CS Career Fair(Comiket)</h1>
 		<a href="logout.php" class="ui-btn-right" data-role="button" data-inline-"true" data-them="a" name="logoutButton" id="logoutButton">Logout</a>
 
@@ -89,7 +89,8 @@ header("Pragma: no-cache");
 		<div data-role="navbar">
 			<ul>
 				<li><a href="map.php">Map</a></li>
-				<li><a href="events.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="events.php">Events</a></li>
+				<li><a href="favorites.php">Favorites</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->

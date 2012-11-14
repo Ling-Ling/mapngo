@@ -24,9 +24,6 @@
 	</div><!-- /header -->
 	
 	<div data-role="content">
-	<script type="text/javascript">setTimeout(function() {
-  window.location.href = "events.php";
-}, 2000);</script>
 
 	<?php
 
@@ -54,6 +51,9 @@
     }
     else{
     echo "Successfully added to favorites, please wait while you are redirected."; 	
+    echo "<script type='text/javascript'>setTimeout(function(){";
+    echo "window.location.href = 'desc.php?event=".$event."';";
+    echo "},2000);</script>";
     }
 	?>
 
@@ -65,8 +65,9 @@
 	<div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
 			<ul>
-				<li><a href="map.html">Map</a></li>
-				<li><a href="test.php" class="ui-btn-active ui-state-persist">Events</a></li>
+				<li><a href="map.php">Map</a></li>
+				<li><a href="events.php">Events</a></li>
+				<li><a href="favorites.php">Favorites</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->
