@@ -24,7 +24,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<center>Welcome. Please log in to begin.</center>
+		<center>Welcome! Please log in or sign up to begin.</center>
 	</div><!-- /content -->
 
 <script type="text/javascript">
@@ -36,14 +36,14 @@
 		<div data-role="fieldcontain">
 		<center>
 	 	<label for="user"><center><b>Username</b></center></label>
-		<input name="username" type="text" id="user">
+		<input name="username" type="text" id="user" autocorrect="off" autocapitalize="off" value="">
 		</center>
 	</div>
 
 	<div data-role="fieldcontain">
 	<center>
 		<label for="pass"><center><b>Password</b></center></label> 
-		<input name="password" type="password" id="pass">
+		<input name="password" type="password" id="pass" autocorrect="off" autocapitalize="off" value="">
 		</center>
 	</div>
 

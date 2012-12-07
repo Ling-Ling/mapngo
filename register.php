@@ -23,8 +23,6 @@
 
 <script type="text/javascript">
 
-        if ("<?php echo $_POST["password"]?>" == "<?php echo $_POST["password2"]?>") {
-
 		// Save the username in local storage. That way you
 		// can access it later even if the user closes the app.
         
@@ -37,17 +35,13 @@
 		user.signUp(null, {
 			success: function(user) {       
            			alert("  <?php echo "".$_POST["username"].", Welcome to MapnGo! You are now logged in."; ?>");
-				window.location = "index.html"; 
+				window.location = "index.php"; 
 			}, 
 			error: function(user, error) {
               		alert("Error: " + error.code + " " + error.message);
-				window.location = "signup.html";
+				window.history.back();
 			}
 		});
-	} else {
-		alert("  <?php echo "Passwords don't match. Please try registering again."; ?>");
-		window.location = "signup.html";
-       }
 </script>	
 	</div><!-- /content -->
 

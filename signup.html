@@ -12,11 +12,11 @@
 	
 </head> 
 
-<body> 
+<body onUnload=""> 
 	<div data-role="page" id="whale">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
+		<a href="login.php" data-role="button" data-icon="arrow-l">Back</a>
 		<h1>Sign Up!</h1>	
 	
 	</div><!-- /header -->
@@ -33,28 +33,21 @@
 	<div data-role="fieldcontain">
 		<center>
 		<label for="username"><b>Username</b></label>
-		<input type="text" name="username" id="username" value=""/>
+		<input type="text" name="username" id="username" autocorrect="off" autocapitalize="off"/>
 		</center>
 	</div>
 
 	<div data-role="fieldcontain">
 		<center>
 		<label for="password"> <b>Password</b></label> 
-		<input type="password" name="password" id="password" value=""/>
-		</center>
-	</div>
-
-	<div data-role="fieldcontain">
-		<center>
-		<label for="password2"> <b>Confirm Password</b></label>
-		<input type="password" name="password2" id="password2" value=""/>
+		<input type="password" name="password" id="password" autocorrect="off" autocapitalize="off"/>
 		</center>
 	</div>
 
 	<div data-role="fieldcontain">
 		<center>
 		<label for="email"><center><b>Email Address</b></center></label>
-		<input type="text" name="email" id="email" value=""/>
+		<input type="text" name="email" id="email" autocorrect="off" autocapitalize="off"/>
 		</center>
 	</div>
 

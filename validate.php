@@ -14,7 +14,7 @@
 
 </head> 
 
-<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')">
+<body onUnload="">
 	<div data-role="page" id="whale">
 	<div data-role="header" data-position="fixed">
 		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
@@ -33,12 +33,14 @@
 
 	Parse.User.logIn(myusername, mypassword, {
 		success: function(user) {
-			alert("Success");
+			alert("Welcome, " + myusername + ". You have been successfully logged in.");
 			localStorage.setItem('username', myusername);
-			window.location = "index.html";
+			window.location = "index.php";
 		},
 		error: function(user, error) {
+			history.back();
 			alert("Error: " + error.code + " " + error.message);
+			
 		}
 	});
 
