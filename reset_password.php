@@ -14,13 +14,12 @@
 <script src="http://www.parsecdn.com/js/parse-1.1.7.min.js"></script>
 </head> 
 
-
-<body onLoad="if (location.href.indexOf('reload')==-1) location.replace(location.href+'?reload')"> 
+<body> 
 	<div data-role="page" id="whale">
 
 	<div data-role="header" data-position="fixed">
-		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l">Back</a>
-		<h1>User Login</h1>
+		<h1>Reset Password</h1>
+		<a href="login.php" data-role="button" data-inline="true" data-icon="arrow-l">Back</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -30,27 +29,19 @@
 	Parse.initialize("zTwaq4vFOY1fjkbQT3SIL1bydVt8ZJMHG1nmzBV4", "yfuAy4J8hcPcLpTFiwXdjEcSg1kvkMzikKRUQCsI");
 </script>
 
-	<form name="loginform" action="validate.php" method="post">
-
-		<div data-role="fieldcontain">
-		<center>
-	 	<label for="user"><center><b>Username</b></center></label>
-		<input name="username" type="text" id="user">
-		</center>
-	</div>
+	<form name="resetform" action="check_email.php" method="post">
 
 	<div data-role="fieldcontain">
 	<center>
-		<label for="pass"><center><b>Password</b></center></label> 
-		<input name="password" type="password" id="pass">
+		<label for="pass"><center><b>Please enter the email associated with your account:</b></center></label> 
+		<input name="emailInput" type="email" id="emailInput">
 		</center>
 	</div>
 
 	<div data-role="buttoncontain" id="buttons">
 		<center>
-		<a href="#" data-inline="true" data-theme="a" data-role="button" 			name="reset" data-icon="delete" >Reset Password</a>
 		<input href="javascript: submitform()"
-			name="login" type="submit" value="Login" 						data-inline="true" data-theme="b" data-role="button"   					data-icon="check">
+			name="submitButton" type="submit" value="Submit" data-inline="true" data-theme="b" data-role="button" data-icon="check">
 		</center>
 	</div>
 	</form>

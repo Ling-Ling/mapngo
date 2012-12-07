@@ -49,7 +49,7 @@
 
 	<div data-role="buttoncontain" id="buttons">
 		<center>
-		<a href="#" data-inline="true" data-theme="a" data-role="button" 			name="reset" data-icon="delete" >Reset Password</a>
+		<a href="reset_password" data-inline="true" data-theme="a" data-role="button" name="reset" data-icon="delete" >Reset Password</a>
 		<input href="javascript: submitform()"
 			name="login" type="submit" value="Login" 						data-inline="true" data-theme="b" data-role="button"   					data-icon="check">
 		</center>
